@@ -30,9 +30,6 @@ const Login_page = () => {
   function onSubmit(values: z.infer<typeof LoginSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-
-    console.log(values);
-    login(values);
   }
   return (
     <div>

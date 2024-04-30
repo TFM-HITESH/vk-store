@@ -13,13 +13,10 @@ export const RegisterUser = async (values: z.infer<typeof RegisterSchema>) => {
 
   try {
     const hasedPassword = await brcypt.hash(password, 10);
-    console.log("Creating");
-    console.log(
-      await db.user.create({
-        data: { email: email, name: username, password: hasedPassword },
-      })
-    );
-    console.log("done");
+
+    await db.user.create({
+      data: { email: email, name: username, password: hasedPassword },
+    });
   } catch (error) {
     console.log("Error in register.ts");
     console.log(error);

@@ -8,13 +8,12 @@ const prisma = new PrismaClient();
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   callbacks: {
+    //adding user data to the middleware req object
     async session({ session, user, token }) {
       if (token.sub && session.user) {
         session.user.id = token.sub;
       }
-      // if (token.role && session.user) {
-      //   session.user.role = token.role;
-      // }
+
       return {
         ...session,
         user: {

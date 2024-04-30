@@ -1,14 +1,11 @@
 import GitHub from "next-auth/providers/github";
 import Google from "next-auth/providers/google";
 import Credentials from "next-auth/providers/credentials";
-//import bcrypt from "bcryptjs";
+
 import type { NextAuthConfig } from "next-auth";
 import { LoginSchema } from "./schemas/authSchema";
 import { getUserByEmail } from "./actions/auth/user";
 import Twitter from "next-auth/providers/twitter";
-
-//import { LoginSchema } from "./schemas/authSchema";
-//import { getUserByEmail } from "./data/user";
 import bcrypt from "bcryptjs";
 export default {
   providers: [
@@ -33,5 +30,3 @@ export default {
     }),
   ],
 } satisfies NextAuthConfig;
-
-//        const user = {password:(await bcrypt.hash("todo",10)).toString()}//await getUserByEmail(email);
