@@ -9,6 +9,7 @@ import { auth } from "@/auth";
 const Navbar = async () => {
   const categories = await getCategories();
   const session = await auth();
+  console.log(session);
   return (
     <div className="border-b">
       <Container>

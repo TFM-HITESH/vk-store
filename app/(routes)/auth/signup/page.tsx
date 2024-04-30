@@ -6,6 +6,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import Button from "@/components/ui/button";
+
 import {
   Form,
   FormControl,
@@ -18,6 +19,7 @@ import {
 
 import { Input } from "@/components/ui/input";
 import { RegisterUser } from "@/actions/auth/register";
+import { OnClick } from "@/actions/auth/socialLogin";
 const signup = () => {
   const form = useForm<z.infer<typeof RegisterSchema>>({
     resolver: zodResolver(RegisterSchema),
@@ -84,6 +86,22 @@ const signup = () => {
           <Button type="submit">Submit</Button>
         </form>
       </Form>
+      <Button
+        className="my-4"
+        onClick={() => {
+          OnClick("google");
+        }}
+      >
+        <p> google</p>
+      </Button>
+      <Button
+        className="m-4"
+        onClick={() => {
+          OnClick("twitter");
+        }}
+      >
+        <p> twitter </p>
+      </Button>
     </div>
   );
 };

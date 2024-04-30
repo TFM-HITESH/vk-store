@@ -5,11 +5,18 @@ import Credentials from "next-auth/providers/credentials";
 import type { NextAuthConfig } from "next-auth";
 import { LoginSchema } from "./schemas/authSchema";
 import { getUserByEmail } from "./actions/auth/user";
+import Twitter from "next-auth/providers/twitter";
+
 //import { LoginSchema } from "./schemas/authSchema";
 //import { getUserByEmail } from "./data/user";
 import bcrypt from "bcryptjs";
 export default {
   providers: [
+    Google({
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRECT,
+    }),
+    Twitter,
     Credentials({
       async authorize(credentials) {
         const validatedFields = LoginSchema.safeParse(credentials);

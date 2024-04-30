@@ -33,7 +33,12 @@ const NavbarActions = ({
       {userName && (
         <div className=" flex space-x-4">
           <form className="cursor-pointer" action={handleSignOut}>
-            <button type="submit">Sign out</button>
+            <Button
+              className="flex items-center rounded-full bg-black px-4 py-2"
+              type="submit"
+            >
+              Sign out
+            </Button>
           </form>
           <Button className="flex items-center rounded-full bg-black px-4 py-2">
             {userName}

@@ -19,7 +19,6 @@ model User {
   Account       Account?
   // Optional for WebAuthn support
   Authenticator Authenticator[]
- 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

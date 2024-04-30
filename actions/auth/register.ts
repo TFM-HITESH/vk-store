@@ -3,6 +3,7 @@ import { RegisterSchema } from "@/schemas/authSchema";
 import { z } from "zod";
 import brcypt from "bcryptjs";
 import { db } from "@/lib/db";
+//register user to the database
 export const RegisterUser = async (values: z.infer<typeof RegisterSchema>) => {
   const validatedFields = RegisterSchema.safeParse(values);
   if (!validatedFields.success) {

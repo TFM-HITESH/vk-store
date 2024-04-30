@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { login } from "@/actions/auth/login";
+import { OnClick } from "@/actions/auth/socialLogin";
 
 const Login_page = () => {
   const form = useForm<z.infer<typeof LoginSchema>>({
@@ -68,6 +69,22 @@ const Login_page = () => {
           <Button type="submit">Submit</Button>
         </form>
       </Form>
+      <Button
+        className="my-4"
+        onClick={() => {
+          OnClick("google");
+        }}
+      >
+        <p> google</p>
+      </Button>
+      <Button
+        className="m-4"
+        onClick={() => {
+          OnClick("twitter");
+        }}
+      >
+        <p> twitter </p>
+      </Button>
     </div>
   );
 };
