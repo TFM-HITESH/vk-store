@@ -7,8 +7,14 @@ import { useEffect, useState } from "react";
 import Button from "@/components/ui/button";
 import useCart from "@/hooks/use-cart";
 import Link from "next/link";
+import { signOut } from "@/auth";
+import { handleSignOut } from "@/actions/auth/handleSignOut";
 
-const NavbarActions = () => {
+const NavbarActions = ({
+  userName,
+}: {
+  userName: string | null | undefined;
+}) => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -24,6 +30,16 @@ const NavbarActions = () => {
 
   return (
     <div className="ml-auto flex items-center gap-x-4">
+      {userName && (
+        <div className=" flex space-x-4">
+          <form className="cursor-pointer" action={handleSignOut}>
+            <button type="submit">Sign out</button>
+          </form>
+          <Button className="flex items-center rounded-full bg-black px-4 py-2">
+            {userName}
+          </Button>
+        </div>
+      )}
       <Link href={"/auth/login"} className=" text-sm font-medium text-white">
         <Button className="flex items-center rounded-full bg-black px-4 py-2">
           Login

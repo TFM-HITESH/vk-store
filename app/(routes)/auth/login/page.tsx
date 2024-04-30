@@ -16,6 +16,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { login } from "@/actions/auth/login";
 
 const Login_page = () => {
   const form = useForm<z.infer<typeof LoginSchema>>({
@@ -30,6 +31,7 @@ const Login_page = () => {
     // ✅ This will be type-safe and validated.
 
     console.log(values);
+    login(values);
   }
   return (
     <div>

@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/form";
 
 import { Input } from "@/components/ui/input";
+import { RegisterUser } from "@/actions/auth/register";
 const signup = () => {
   const form = useForm<z.infer<typeof RegisterSchema>>({
     resolver: zodResolver(RegisterSchema),
@@ -30,6 +31,7 @@ const signup = () => {
     // ✅ This will be type-safe and validated.
 
     console.log(values);
+    RegisterUser(values);
   }
   return (
     <div className="p-4">
