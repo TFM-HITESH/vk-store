@@ -2,6 +2,8 @@
 
 import useCart from '@/hooks/use-cart';
 import axios from 'axios';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 
 const CheckoutForm = () => {
@@ -14,7 +16,9 @@ const CheckoutForm = () => {
     const [city, setCity] = useState('');
     const [state, setState] = useState('');
     const [pin, setPin] = useState('');
-    const [country, setCountry] = useState('');
+    const [country, setCountry] = useState('');    
+
+    const router = useRouter();
 
     const items = useCart((state) => state.items)
     const removeAll = useCart((state) => state.removeAll)
@@ -23,6 +27,7 @@ const CheckoutForm = () => {
     const [amount, setAmount] = useState('0');
 
     useEffect(() => {
+        console.log(items);
         const onCheckout = async () => {
             const response = await axios.post(
                 `http://127.0.0.1:5000/api/payments/orders`,
@@ -36,6 +41,44 @@ const CheckoutForm = () => {
         }
         onCheckout();
     }, []);
+    
+    const submitHandler = async(event:any) =>{
+        event?.preventDefault();
+        try{
+            await axios.post('http://127.0.0.1:5000/api/v1/user/saveUserOrder',
+                {
+                    orderId: orderId,
+                    productIds: items.map((item) => item.id),
+                    userData: {
+                        firstName: firstName,
+                        lastName: lastName,
+                        email: email,
+                        phone: phone,
+                        address1: address1,
+                        address2: address2,
+                        city: city,
+                        state: state,
+                        pin: pin,
+                        country: country
+                    }
+                }
+            ).then((response) => {
+                if(response.status === 200){
+                    console.log(response.data.message);
+                }else{
+                    console.log(response.data.message);
+                }
+            })
+
+            // Store order details in local storage
+            localStorage.setItem('orderId', orderId);
+            localStorage.setItem('amount', amount);
+
+            router.push('/payment');
+        } catch(error){
+            console.log(error);
+        }
+    }
 
     return (
         <div className="flex mx-auto w-full h-full justify-center">
@@ -194,29 +237,12 @@ const CheckoutForm = () => {
                             onChange={(e) => { setPin(e.target.value) }}
                         />
                     </div>
-
-                    <form method="POST" action="https://api.razorpay.com/v1/checkout/embedded">
-                        <input type="hidden" name="key_id" value={process.env.NEXT_PUBLIC_KEY_ID} />
-                        <input type="hidden" name="amount" value={amount} />
-                        <input type="hidden" name="order_id" value={orderId} />
-                        <input type="hidden" name="name" value="Vicuna Kouture" />
-                        <input type="hidden" name="description" value="A Wild Sheep Chase" />
-                        <input type="hidden" name="image" value="https://qwerty1234.sirv.com/Images/IMG_20240130_142842_046.jpg" />
-                        <input type="hidden" name="prefill[name]" value="Gaurav Kumar" />
-                        <input type="hidden" name="prefill[contact]" value="9123456780" />
-                        <input type="hidden" name="prefill[email]" value="gaurav.kumar@example.com" />
-                        <input type="hidden" name="notes[shipping address]" value="L-16, The Business Centre, 61 Wellfield Road, New Delhi - 110001" />
-                        <input type="hidden" name="callback_url" value="http://localhost:5000/api/payments/payment-callback" />
-                        <input type="hidden" name="cancel_url" value="http://localhost:5000/api/payments/payment-cancel" />
-                        <div className="mt-4 flex justify-center">
-                        <button
-                            type='submit'
-                            className="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded"
-                        >
-                            Proceed
-                        </button>
-                    </div>
-                    </form>
+                    <button
+                        onClick={submitHandler}
+                        className="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded"
+                    >
+                        Proceed
+                    </button>
                 </form>
             </div>
         </div>
