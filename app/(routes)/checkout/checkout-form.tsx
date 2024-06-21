@@ -48,6 +48,7 @@ const CheckoutForm = () => {
             await axios.post('http://127.0.0.1:5000/api/v1/user/saveUserOrder',
                 {
                     orderId: orderId,
+                    amount: parseInt(amount),
                     productIds: items.map((item) => item.id),
                     userData: {
                         firstName: firstName,
