@@ -45,25 +45,23 @@ const NavbarActions = ({
           </Button>
         </div>
       )}
-      <Link href={"/auth/login"} className=" text-sm font-medium text-white">
-        <Button className="flex items-center rounded-full bg-black px-4 py-2">
+      <Link href={"/auth/login"} className=" text-sm font-medium text-white ">
+        <Button className="flex items-center rounded-full bg-black px-4 py-2 border-2 border-transparent hover:border-2 hover:border-black hover:scale-110 ease-in-out transition-all duration-400 hover:bg-pink-300 hover:text-black">
           Login
         </Button>
       </Link>
       <Link href={"/auth/signup"} className=" text-sm font-medium text-white">
-        <Button className="flex items-center rounded-full bg-black px-4 py-2">
-          SignUp
+        <Button className="flex items-center rounded-full bg-black px-4 py-2 border-2 border-transparenthover:border-2 hover:border-black hover:scale-110 ease-in-out transition-all duration-400 hover:bg-pink-300 hover:text-black">
+          Sign Up
         </Button>
       </Link>
 
       <Button
         onClick={() => router.push("/cart")}
-        className="flex items-center rounded-full bg-black px-4 py-2"
+        className="flex items-center rounded-full bg-black px-4 py-2 border-2 border-transparent hover:border-2 hover:border-black hover:scale-110 ease-in-out transition-all duration-400 hover:bg-pink-300 hover:text-black"
       >
-        <ShoppingBag size={20} color="white" />
-        <span className="ml-2 text-sm font-medium text-white">
-          {cart.items.length}
-        </span>
+        <ShoppingBag size={20} className="" />
+        <span className="ml-2 text-sm font-bold ">{cart.items.length}</span>
       </Button>
     </div>
   );
