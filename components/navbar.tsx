@@ -11,7 +11,7 @@ const Navbar = async () => {
   const session = await auth();
 
   return (
-    <div className="border-b">
+    <div className="border-b bg-[#666666]">
       <Container>
         <div className="relative px-4 sm:px-6 lg:px-8 flex h-16 items-center">
           <Link href="/" className="ml-4 flex lg:ml-0 gap-x-2">

@@ -1,10 +1,13 @@
 const Footer = () => {
     return (
-        <footer className="bg-white border-t">
-            <div className="mx-auto py-10">
-                <p className="text-center text-xs text-black">
-                    &copy; 2024 Vicuna Kouture Inc. All rights reserved.
-                </p>
+        <footer className="bg-black border-t text-white">
+            <div className="mx-auto py-10 px-8 flex flex-row ">
+                <div>
+                    
+                </div>
+                <div>
+
+                </div>
             </div>
         </footer>
     )
