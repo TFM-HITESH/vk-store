@@ -16,9 +16,9 @@ const Navbar = async () => {
   return (
     <div className="shadow-sm bg-[#76287E] w-full">
       <Container>
-        <div className="relative px-4 sm:px-6 lg:px-8 flex py-1 items-center justify-center flex-row w-full mx-auto">
+        <div className="relative px-4 sm:px-6 lg:px-8 flex py-6 items-center justify-center flex-row w-full mx-auto">
           <div className="w-full flex items-center">
-            <Image src="/vk.png" height={150} width={150} alt={""}></Image>
+            <Image src="/vk.png" height={100} width={100} alt={""}></Image>
           </div>
 
           <Link

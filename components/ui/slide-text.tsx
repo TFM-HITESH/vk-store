@@ -37,7 +37,7 @@ export function MultiDirectionSlide() {
         initial="hidden"
         animate="visible"
         variants={MULTIDIRECTION_SLIDE_VARIANTS}
-        transition={{ duration: 2.5, delay: 0.5 }}
+        transition={{ duration: 1.5, delay: 0.2 }}
         className="text-center font-display text-3xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-5xl md:leading-[5rem]"
       >
         Vicuna
@@ -47,7 +47,7 @@ export function MultiDirectionSlide() {
         initial="right"
         animate="visible"
         variants={MULTIDIRECTION_SLIDE_VARIANTS}
-        transition={{ duration: 2.5, delay: 1 }}
+        transition={{ duration: 1.5, delay: 0.5 }}
         className="text-center font-display text-3xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-5xl md:leading-[5rem]"
       >
         Kouture
