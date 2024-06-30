@@ -1,5 +1,3 @@
-
-
 import { Urbanist } from "next/font/google";
 
 import ModalProvider from "@/providers/modal-provider";
@@ -10,6 +8,7 @@ import Footer from "@/components/footer";
 import "./globals.css";
 import Salebar from "@/components/salebar";
 import { Hero } from "@/components/hero";
+import Faqsection from "@/components/faqsection";
 
 const font = Urbanist({ subsets: ["latin"] });
 
@@ -32,8 +31,9 @@ export default function RootLayout({
         <Navbar />
 
         <Hero />
-        
+
         {children}
+        <Faqsection />
         <Footer />
       </body>
     </html>
