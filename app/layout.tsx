@@ -11,6 +11,7 @@ import { Hero } from "@/components/hero";
 import Faqsection from "@/components/faqsection";
 import { Fashion } from "@/components/fashion";
 import Marquee from "@/components/marquee";
+import CreativeHubs from "@/components/creative-hubs";
 
 const font = Urbanist({ subsets: ["latin"] });
 
@@ -36,6 +37,8 @@ export default function RootLayout({
         <Hero />
 
         {children}
+
+        <CreativeHubs />
         <Fashion />
         <Faqsection />
         <Footer />

@@ -1,6 +1,6 @@
 "use client";
-import { motion } from "framer-motion";
-import React from "react";
+import { motion, useScroll } from "framer-motion";
+import React, { useRef } from "react";
 import { ImagesSlider } from "@/components/ui/images-slider";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import Image from "next/image";
@@ -9,6 +9,12 @@ export function Fashion() {
     hidden: { opacity: 0, y: 10 },
     show: { opacity: 1, y: 0, transition: { type: "spring" } },
   };
+
+  //   const ref = useRef(null);
+  //   useScroll({
+  //     target: "",
+  //     offset: ["0 1", "1.33 1"],
+  //   });
 
   return (
     <motion.div
