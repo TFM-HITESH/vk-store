@@ -10,6 +10,7 @@ import Salebar from "@/components/salebar";
 import { Hero } from "@/components/hero";
 import Faqsection from "@/components/faqsection";
 import { Fashion } from "@/components/fashion";
+import Marquee from "@/components/marquee";
 
 const font = Urbanist({ subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default function RootLayout({
         <ModalProvider />
         <Salebar />
         <Navbar />
+        <Marquee />
 
         <Hero />
 
