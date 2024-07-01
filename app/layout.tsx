@@ -32,15 +32,9 @@ export default function RootLayout({
         <ModalProvider />
         <Salebar />
         <Navbar />
-        <Marquee />
-
-        <Hero />
 
         {children}
 
-        <CreativeHubs />
-        <Fashion />
-        <Faqsection />
         <Footer />
       </body>
     </html>
