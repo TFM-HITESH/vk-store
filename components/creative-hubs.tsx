@@ -11,7 +11,7 @@ export default function creativeHubs({}: Props) {
         height={200}
         width={200}
         alt="Picture of the author"
-        className="flex absolute top-[20%] left-[20%] z-10"
+        className="flex absolute top-[0%] left-[0%] z-100"
       />
 
       <p className="font-extrabold text-6xl z-20 flex">COMING SOON</p>
