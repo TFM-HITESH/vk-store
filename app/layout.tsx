@@ -9,6 +9,7 @@ import "./globals.css";
 import Salebar from "@/components/salebar";
 import { Hero } from "@/components/hero";
 import Faqsection from "@/components/faqsection";
+import { Fashion } from "@/components/fashion";
 
 const font = Urbanist({ subsets: ["latin"] });
 
@@ -23,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className=" !scroll-smooth">
       <body className={font.className}>
         <ToastProvider />
         <ModalProvider />
@@ -33,6 +34,7 @@ export default function RootLayout({
         <Hero />
 
         {children}
+        <Fashion />
         <Faqsection />
         <Footer />
       </body>
