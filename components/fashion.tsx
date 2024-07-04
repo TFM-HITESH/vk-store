@@ -31,28 +31,28 @@ export function Fashion() {
         },
       }}
     >
-      <div className="flex flex-row text-white p-10 w-full relative h-[135vh] bg-black/40">
+      <div className="flex flex-row text-white md:p-10 p-3 w-full relative h-[135vh] bg-black/40">
         <Image
           src="/fashion.png"
           fill={true}
           alt="Picture of the author"
-          className="flex flex-col -z-10 relative"
+          className="flex flex-col -z-10 relative object-cover"
         />
         <div className="w-full flex flex-col items-start justify-end p-10 text-left">
           <motion.div
-            className="text-[4rem] font-bold flex justify-center "
+            className="md:text-[4rem] text-[30pt] font-bold flex justify-center "
             variants={FADE_UP_ANIMATION_VARIANTS}
           >
             DONT MISS OUT,
           </motion.div>
           <motion.div
-            className="text-[4rem] font-bold flex justify-center "
+            className="md:text-[4rem] text-[30pt] font-bold flex justify-center "
             variants={FADE_UP_ANIMATION_VARIANTS}
           >
             EXPLORE OUR COLLECTION
           </motion.div>
           <motion.div
-            className="text-[2rem] font-light flex justify-center pt-[3.5%] "
+            className="md:text-[2rem] text-[15pt] font-light flex justify-center pt-[3.5%] "
             variants={FADE_UP_ANIMATION_VARIANTS}
           >
             UNCOVER THE LATEST TRENDS DAILY AT VICUNA STORE, WHERE OUR CURATED
@@ -62,7 +62,7 @@ export function Fashion() {
             className="flex items-center justify-start w-full pt-[5%] "
             variants={FADE_UP_ANIMATION_VARIANTS}
           >
-            <motion.button className="bg-fuchsia-600/60 border ring-1 ring-gray-900/5 border-white border-1 p-4 px-8 text-3xl rounded-[0.2rem] hover:scale-110 hover:bg-fuchsia-600/90 hover:border-3 transition-all duration-300 ease-in-out font-bold hover:font-extrabold  hover:shadow-4xl shadow-2xl shadow-purple-500/50 hover:shadow-purple-500/80">
+            <motion.button className="bg-fuchsia-600/60 border ring-1 ring-gray-900/5 border-white border-1 p-4 px-8 md:text-3xl text-xl rounded-[0.2rem] hover:scale-110 hover:bg-fuchsia-600/90 hover:border-3 transition-all duration-300 ease-in-out font-bold hover:font-extrabold  hover:shadow-4xl shadow-2xl shadow-purple-500/50 hover:shadow-purple-500/80">
               SHOP NOW !
             </motion.button>
           </motion.div>

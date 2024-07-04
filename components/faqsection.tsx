@@ -6,19 +6,19 @@ type Props = {};
 
 export default function faqsection({}: Props) {
   return (
-    <div className="w-full p-20 flex flex-row gap-10">
-      <div className="w-[70%]">
+    <div className="w-full md:p-20 p-5 flex md:flex-row flex-col gap-10">
+      <div className="md:w-[70%] w-full">
         <AccordionFaq />
       </div>
-      <div className="w-[30%] gap-5 flex flex-col">
+      <div className="md:w-[30%] w-full gap-5 flex md:flex-col flex-row">
         <div className="h-[50%] w-full border border-black p-4 flex flex-col gap-1">
-          <p className="text-xl font-bold">NEWSLETTER</p>
-          <p>STAY UPDATED WITH THE LATEST TRENDS</p>
+          <p className="md:text-xl text-lg font-bold">NEWSLETTER</p>
+          <p className="md:text-lg text-[10pt]">STAY UPDATED WITH THE LATEST TRENDS</p>
           <input
             placeholder="EMAIL"
-            className="border-b border-black mt-4 w-[75%] focus:outline-none"
+            className="md:text-lg text-[10pt] border-b border-black mt-4 w-[75%] focus:outline-none"
           ></input>
-          <button className="bg-[#76287E] hover:bg-fuchsia-800/80 transition-all duration-100 ease-in-out hover:rounded-sm w-[30%] p-1 text-white text-bold">
+          <button className="md:text-lg text-[10pt] bg-[#76287E] hover:bg-fuchsia-800/80 transition-all duration-100 ease-in-out hover:rounded-sm md:w-[30%] p-1 text-white text-bold">
             SUBSCRIBE
           </button>
         </div>

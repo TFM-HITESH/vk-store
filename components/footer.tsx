@@ -14,25 +14,25 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="bg-black border-t text-white">
-      <div className="mx-auto pt-20 pb-4 px-16 flex flex-row ">
+      <div className="mx-auto pt-20 pb-4 md:px-16 px-8 flex flex-row ">
         <div className="w-full h-full">
-          <div className="text-2xl font-extrabold mb-[25%]">Vicuna Kouture</div>
-          <div className="flex flex-row gap-2">
+          <div className="md:text-2xl text-xl font-extrabold mb-[25%]">Vicuna Kouture</div>
+          <div className="flex flex-row md:gap-2 gap-1">
             <p className="hover:rotate-[360deg] transition-all duration-500 ease-out">
-              <Copyright />
+              <Copyright height={15}/>
             </p>
-            <p className="hover:underline hover:decoration-dotted hover:underline-offset-2 transition-all duration-500 ease-out">
+            <p className="md:text-xl text-xs hover:underline hover:decoration-dotted hover:underline-offset-2 transition-all duration-500 ease-out">
               2024 vicuna kouture
             </p>
           </div>
         </div>
         <div className="w-full">
-          <div className="flex flex-row mx-auto w-full ">
-            <div className="w-full text-xl ">
+          <div className="flex flex-row mx-auto w-full md:gap-1 gap-2">
+            <div className="w-full md:text-xl text-md">
               <p className="hover:underline hover:decoration-dotted hover:underline-offset-2 transition-all duration-200 ease-out hover:scale-110 hover:translate-x-3">
                 Navigation
               </p>
-              <div className="flex flex-col mt-[5%] text-lg font-light">
+              <div className="flex flex-col mt-[5%] md:text-lg text-sm font-light">
                 <Link
                   href="/"
                   className="hover:translate-x-4 transition-all duration-200 ease-out"
@@ -53,11 +53,11 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div className="w-full text-xl ">
+            <div className="w-full md:text-xl text-md ">
               <p className="hover:underline hover:decoration-dotted hover:underline-offset-2 transition-all duration-200 ease-out hover:scale-110 hover:translate-x-3">
                 Website
               </p>
-              <div className="flex flex-col mt-[5%] text-lg font-light">
+              <div className="flex flex-col mt-[5%] md:text-lg text-sm font-light">
                 <Link
                   href="/"
                   className="hover:translate-x-4 transition-all duration-200 ease-out"
@@ -78,11 +78,11 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div className="w-full text-xl ">
+            <div className="w-full md:text-xl text-md ">
               <p className="hover:underline hover:decoration-dotted hover:underline-offset-2 transition-all duration-200 ease-out hover:scale-110 hover:translate-x-3">
                 Account
               </p>
-              <div className="flex flex-col mt-[5%] text-lg font-light">
+              <div className="flex flex-col mt-[5%] md:text-lg text-sm font-light">
                 <Link
                   href="/"
                   className="hover:translate-x-4 transition-all duration-200 ease-out"

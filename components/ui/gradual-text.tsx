@@ -21,7 +21,7 @@ export function GradualSpacing({ text }: GradualSpacingProps) {
             exit="hidden"
             variants={gradual}
             transition={{ duration: 0.25, delay: i * 0.025 }}
-            className="text-center font-display font-bold tracking-[-0.02em] drop-shadow-sm md:leading-[5rem]"
+            className="text-center font-display font-bold tracking-[-0.02em] drop-shadow-sm md:leading-[5rem] text-[5pt]"
           >
             {char === " " ? <span>&nbsp;</span> : char}
           </motion.h1>

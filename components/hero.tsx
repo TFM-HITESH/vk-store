@@ -25,37 +25,37 @@ export function Hero() {
         },
       }}
     >
-      <div className="flex flex-row text-white p-10 w-full relative h-[100vh] bg-black/40">
+      <div className="flex md:flex-row flex-col-reverse justify-center text-white p-10 w-full relative h-[100vh] bg-black/40">
         <Image
           src="/llama.jpeg"
           fill={true}
           alt="Picture of the author"
-          className="flex flex-col -z-10 relative"
+          className="flex flex-col -z-10 relative object-cover"
         />
         <motion.div
           className="flex items-center justify-center w-full "
           variants={FADE_UP_ANIMATION_VARIANTS}
         >
-          <motion.button className="bg-fuchsia-600/60 border ring-1 ring-gray-900/5 border-white border-1 p-4 px-8 text-3xl rounded-[0.2rem] hover:scale-110 hover:bg-fuchsia-600/90 hover:border-3 transition-all duration-300 ease-in-out font-bold hover:font-extrabold  hover:shadow-4xl shadow-2xl shadow-purple-500/50 hover:shadow-purple-500/80">
+          <motion.button className="bg-fuchsia-600/60 border ring-1 ring-gray-900/5 border-white border-1 p-4 px-8 md:text-3xl text-xl rounded-[0.2rem] hover:scale-110 hover:bg-fuchsia-600/90 hover:border-3 transition-all duration-300 ease-in-out font-bold hover:font-extrabold  hover:shadow-4xl shadow-2xl shadow-purple-500/50 hover:shadow-purple-500/80">
             SHOP NOW !
           </motion.button>
         </motion.div>
 
-        <div className="w-full flex flex-col items-end p-10 text-right">
+        <div className="w-full flex flex-col justify-center items-center md:items-start md:p-10 text-center md:text-left">
           <motion.div
-            className="text-[7rem] font-bold flex justify-center "
+            className="md:text-[7rem] text-7xl font-bold flex "
             variants={FADE_UP_ANIMATION_VARIANTS}
           >
-            VICUNA <br /> KOUTURE
+            VICUNA KOUTURE
           </motion.div>
           <motion.div
-            className="text-5xl flex justify-center "
+            className="md:text-5xl text-2xl flex md:mb-0 mb-7"
             variants={FADE_UP_ANIMATION_VARIANTS}
           >
             UNLEASH YOUR PANACHE
           </motion.div>
           <motion.div
-            className="flex justify-end items-end pt-[10%]"
+            className="flex w-full justify-center items-end pt-[10%]"
             variants={FADE_UP_ANIMATION_VARIANTS}
           >
             <Image
@@ -63,7 +63,7 @@ export function Hero() {
               height={200}
               width={200}
               alt="Picture of the author"
-              className="flex flex-col z-10 relative opacity-70"
+              className="flex flex-col z-10 relative opacity-70 md:mb-0 mb-10"
             />
           </motion.div>
         </div>
