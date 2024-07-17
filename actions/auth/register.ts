@@ -1,7 +1,7 @@
 "use server";
 import { RegisterSchema } from "@/schemas/authSchema";
 import { z } from "zod";
-import brcypt from "bcryptjs";
+import bcrypt from "bcryptjs";
 import { db } from "@/lib/db";
 //register user to the database
 export const RegisterUser = async (values: z.infer<typeof RegisterSchema>) => {
@@ -12,10 +12,10 @@ export const RegisterUser = async (values: z.infer<typeof RegisterSchema>) => {
   const { email, password, username } = validatedFields.data;
 
   try {
-    const hasedPassword = await brcypt.hash(password, 10);
+    const hashedPassword = await bcrypt.hash(password, 10);
 
     await db.user.create({
-      data: { email: email, name: username, password: hasedPassword },
+      data: { email: email, name: username, password: hashedPassword },
     });
   } catch (error) {
     console.log("Error in register.ts");
