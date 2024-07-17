@@ -20,7 +20,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { RegisterUser } from "@/actions/auth/register";
 import { OnClick } from "@/actions/auth/socialLogin";
-const signup = () => {
+const Signup = () => {
   const form = useForm<z.infer<typeof RegisterSchema>>({
     resolver: zodResolver(RegisterSchema),
     defaultValues: {
@@ -106,4 +106,4 @@ const signup = () => {
   );
 };
 
-export default signup;
+export default Signup;
