@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import React from "react";
+import React, { Suspense } from "react";
 import { ImagesSlider } from "@/components/ui/images-slider";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import Image from "next/image";
@@ -25,14 +25,21 @@ export function Hero() {
         },
       }}
     >
-      <div className="flex md:flex-row flex-col-reverse justify-center text-white p-10 w-full relative h-[100vh] bg-black/40">
-        <Image
+      <div className="flex md:flex-row flex-col-reverse justify-center text-white w-full relative">
+        {/* <Image
           src="/llama.jpeg"
           fill={true}
           alt="Picture of the author"
           className="flex flex-col -z-10 relative object-cover"
-        />
-        <motion.div
+        /> */}
+        <Suspense fallback={<p>Loading video...</p>}>
+          <video preload="none" className=" w-auto min-w-full min-h-full max-w-none" autoPlay loop muted>
+            <source src="vkvid.mp4" type="video/mp4" />
+
+            Your browser does not support the video tag.
+          </video>
+        </Suspense>
+        {/* <motion.div
           className="flex items-center justify-center w-full "
           variants={FADE_UP_ANIMATION_VARIANTS}
         >
@@ -66,7 +73,7 @@ export function Hero() {
               className="flex flex-col z-10 relative opacity-70 md:mb-0 mb-10"
             />
           </motion.div>
-        </div>
+        </div> */}
       </div>
     </motion.div>
   );

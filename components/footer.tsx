@@ -13,7 +13,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-black border-t text-white">
+    <footer className="bg-black text-white">
       <div className="mx-auto pt-20 pb-4 md:px-16 px-8 flex flex-row ">
         <div className="w-full h-full">
           <div className="md:text-2xl text-xl font-extrabold mb-[25%]">Vicuna Kouture</div>

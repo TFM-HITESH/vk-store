@@ -16,7 +16,7 @@ export default function creativeHubs({ }: Props) {
   // };
 
   return (
-    <div className="w-full bg-black py-[4rem] pb-[12rem] px-10 text-white relative flex flex-col items-center">
+    <div className="w-full bg-black py-[4rem] pb-[12rem] px-10 text-white relative flex flex-col items-center overflow-hidden">
       <Image
         src="/dotgrid.svg"
         height={200}
@@ -24,22 +24,22 @@ export default function creativeHubs({ }: Props) {
         alt="Picture of the author"
         className={`flex absolute top-[3%] left-[55%] z-100 animate-breathing ${getRandomDelayClass()}`}
       />
-      <div className="rotate-45">
-        <Image
-          src="/dotgrid.svg"
-          height={300}
-          width={300}
-          alt="Picture of the author"
-          className={`flex absolute top-[30%] left-[75%] scale-150 z-100 animate-breathing ${getRandomDelayClass()}`}
-        />
-      </div>
+
+      <Image
+        src="/dotgrid.svg"
+        height={300}
+        width={300}
+        alt="Picture of the author"
+        className={`flex absolute top-[33%] left-[85%] scale-150 z-100 animate-breathing ${getRandomDelayClass()}`}
+      />
+
 
       <Image
         src="/dotgrid.svg"
         height={200}
         width={200}
         alt="Picture of the author"
-        className={`flex absolute top-[65%] left-[15%] z-100 animate-breathing ${getRandomDelayClass()}`}
+        className={`flex absolute top-[42%] left-[2%] z-100 animate-breathing ${getRandomDelayClass()}`}
       />
       <Image
         src="/dotgrid.svg"

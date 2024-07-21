@@ -11,6 +11,7 @@ import { Hero } from "@/components/hero";
 import CreativeHubs from "@/components/creative-hubs";
 import { Fashion } from "@/components/fashion";
 import Faqsection from "@/components/faqsection";
+import Custompics from "@/components/custompics";
 
 export const revalidate = 0;
 
@@ -28,6 +29,7 @@ const HomePage = async () => {
       <CreativeHubs />
       <Fashion />
       <Faqsection />
+      <Custompics />
       {/* <Billboard data={billboard} /> */}
     </main>
   );
