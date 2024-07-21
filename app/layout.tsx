@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className=" !scroll-smooth">
+    <html lang="en" className=" !scroll-smooth scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar scrollbar-thumb-[#38122d] scrollbar-track-[#f676b0]">
       <body className={font.className}>
         <ToastProvider />
         <ModalProvider />
