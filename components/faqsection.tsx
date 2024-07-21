@@ -10,7 +10,7 @@ type Props = {};
 export default function faqsection({ }: Props) {
   return (
     <div className="w-full md:p-20 p-5 flex md:flex-row flex-col gap-10">
-      <div className="md:w-[70%] w-full flex-row flex p-1 gap-4">
+      <div className="md:w-[70%] w-full flex-col md:flex-row  flex p-1 gap-4">
         {/* <AccordionFaq /> */}
         <div className="flex justify-center p-2 bg-[#76287E] items-center rounded-lg my-auto pt-5 px-3">
           <InstagramEmbed url="https://www.instagram.com/reel/C6WIP3bL-eg/?igsh=eDVjOW5odGh5NWYw" />
