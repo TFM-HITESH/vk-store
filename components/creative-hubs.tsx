@@ -3,7 +3,18 @@ import Image from "next/image";
 
 type Props = {};
 
-export default function creativeHubs({}: Props) {
+export default function creativeHubs({ }: Props) {
+
+  const getRandomDelayClass = () => {
+    const delays = ['delay-0', 'delay-0.5s', 'delay-1s', 'delay-1.5s', 'delay-2s', 'delay-2.5s', 'delay-3s'];
+    return delays[Math.floor(Math.random() * delays.length)];
+  };
+
+  // const getRandomScaleClass = () => {
+  //   const delays = ['scale-100', 'scale-110', 'scale-125', 'scale-150'];
+  //   return delays[Math.floor(Math.random() * delays.length)];
+  // };
+
   return (
     <div className="w-full bg-black py-[4rem] pb-[12rem] px-10 text-white relative flex flex-col items-center">
       <Image
@@ -11,8 +22,35 @@ export default function creativeHubs({}: Props) {
         height={200}
         width={200}
         alt="Picture of the author"
-        className="flex absolute top-[0%] left-[0%] z-100"
+        className={`flex absolute top-[3%] left-[55%] z-100 animate-breathing ${getRandomDelayClass()}`}
       />
+      <div className="rotate-45">
+        <Image
+          src="/dotgrid.svg"
+          height={300}
+          width={300}
+          alt="Picture of the author"
+          className={`flex absolute top-[30%] left-[75%] scale-150 z-100 animate-breathing ${getRandomDelayClass()}`}
+        />
+      </div>
+
+      <Image
+        src="/dotgrid.svg"
+        height={200}
+        width={200}
+        alt="Picture of the author"
+        className={`flex absolute top-[65%] left-[15%] z-100 animate-breathing ${getRandomDelayClass()}`}
+      />
+      <Image
+        src="/dotgrid.svg"
+        height={400}
+        width={400}
+        alt="Picture of the author"
+        className={`flex absolute top-[55%] left-[50%] z-100 animate-breathing ${getRandomDelayClass()}`}
+      />
+
+
+
 
       <p className="font-extrabold md:text-6xl text-2xl z-20 flex">COMING SOON</p>
       {/* <VelocityScroll /> */}
@@ -21,13 +59,13 @@ export default function creativeHubs({}: Props) {
           <Image
             src="/create1.png"
             alt="Picture of the author"
-            className="rounded-sm"  
-            object-fit="cover" 
-            fill={true}  
+            className="rounded-sm"
+            object-fit="cover"
+            fill={true}
           />
         </div>
         <div className="w-full p-10">
-          <div className="md:text-[4rem] text-[2rem] md:text-left text-center">
+          <div className="md:text-[4rem] text-[2rem] md:text-left text-center flex flex-col z-200">
             EXPLORE THE MIND OF A{" "}
             <span className="text-[#76287E] hover:underline hover:decoration-[#76287E] hover:underline-offset-2 hover:decoration-dotted">
               TRENDSETTER
@@ -43,7 +81,7 @@ export default function creativeHubs({}: Props) {
       </div>
       <div className="flex items-center md:flex-row flex-col-reverse p-1 pt-[15%] w-full">
         <div className="w-full p-10">
-          <div className="md:text-[4rem] text-[2rem] md:text-left text-center">
+          <div className="md:text-[4rem] text-[2rem] md:text-left text-center z-200 flex-col flex">
             BRING YOUR IDEAS INTO{" "}
             <span className="text-[#76287E] hover:underline hover:decoration-[#76287E] hover:underline-offset-2 hover:decoration-dotted">
               REALITY
@@ -60,8 +98,8 @@ export default function creativeHubs({}: Props) {
           <Image
             src="/create2.png"
             alt="Picture of the author"
-            className="rounded-sm"  
-            object-fit="cover" 
+            className="rounded-sm"
+            object-fit="cover"
             fill={true}
           />
         </div>

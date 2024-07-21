@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="md:text-2xl text-xl font-extrabold mb-[25%]">Vicuna Kouture</div>
           <div className="flex flex-row md:gap-2 gap-1">
             <p className="hover:rotate-[360deg] transition-all duration-500 ease-out">
-              <Copyright height={15}/>
+              <Copyright />
             </p>
             <p className="md:text-xl text-xs hover:underline hover:decoration-dotted hover:underline-offset-2 transition-all duration-500 ease-out">
               2024 vicuna kouture
