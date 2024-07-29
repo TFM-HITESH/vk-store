@@ -11,35 +11,35 @@ export function Hero() {
   };
 
   return (
-    <motion.div
-      initial="hidden"
-      animate="show"
-      viewport={{ once: true }}
-      variants={{
-        hidden: {},
-        show: {
-          transition: {
-            staggerChildren: 0.25,
-            duration: 1,
-          },
-        },
-      }}
-    >
-      <div className="flex md:flex-row flex-col-reverse justify-center text-white w-full relative">
-        {/* <Image
+    // <motion.div
+    //   initial="hidden"
+    //   animate="show"
+    //   viewport={{ once: true }}
+    //   variants={{
+    //     hidden: {},
+    //     show: {
+    //       transition: {
+    //         staggerChildren: 0.25,
+    //         duration: 1,
+    //       },
+    //     },
+    //   }}
+    // >
+    <div className="flex md:flex-row flex-col-reverse justify-center text-white w-full relative">
+      {/* <Image
           src="/llama.jpeg"
           fill={true}
           alt="Picture of the author"
           className="flex flex-col -z-10 relative object-cover"
         /> */}
-        <Suspense fallback={<p>Loading video...</p>}>
-          <video preload="none" className=" w-auto min-w-full min-h-full max-w-none" autoPlay loop muted>
-            <source src="vkvid.mp4" type="video/mp4" />
+      <Suspense fallback={<p>Loading video...</p>}>
+        <video preload="none" className=" w-auto min-w-full min-h-full max-w-none" autoPlay loop muted>
+          <source src="vkvid.webm" type="video/webm" />
 
-            Your browser does not support the video tag.
-          </video>
-        </Suspense>
-        {/* <motion.div
+          Your browser does not support the video tag.
+        </video>
+      </Suspense>
+      {/* <motion.div
           className="flex items-center justify-center w-full "
           variants={FADE_UP_ANIMATION_VARIANTS}
         >
@@ -74,7 +74,7 @@ export function Hero() {
             />
           </motion.div>
         </div> */}
-      </div>
-    </motion.div>
+    </div>
+    // </motion.div>
   );
 }

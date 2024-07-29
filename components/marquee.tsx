@@ -1,3 +1,5 @@
+// "use client"
+
 import {
   CloudLightningIcon,
   Paintbrush,
@@ -10,7 +12,7 @@ import React from "react";
 
 type Props = {};
 
-export default function marquee({}: Props) {
+export default function marquee({ }: Props) {
   return (
     <div className="relative flex overflow-x-hidden bg-gradient-to-r from-[#341933] via-[#572a43] to-[#341933] animated-background text-white ">
       <div className="py-2 animate-marquee whitespace-nowrap text-lg flex flex-row">

@@ -1,3 +1,4 @@
+// "use client"
 import Link from "next/link";
 
 import MainNav from "@/components/main-nav";
@@ -15,28 +16,34 @@ const Navbar = async () => {
 
   return (
     <div className="shadow-sm bg-[#76287E] w-full">
-      <Container>
-        <div className="relative px-4 sm:px-6 lg:px-8 flex py-6 items-center justify-center flex-row w-full mx-auto">
-          <div className="w-full flex items-center">
-            <Image src="/vk.png" height={100} width={100} alt={""}></Image>
-          </div>
+      {/* <Container> */}
+      <div className="relative sm:px-6 lg:px-12 flex py-4 items-center justify-center flex-row w-full mx-auto">
 
-          <Link
-            href="/"
-            className="ml-4 flex lg:ml-0 gap-x-2 w-full items-center justify-center"
-          >
-            {/* <p className="font-bold text-xl">Vicuna Kouture</p>
-             */}
 
-            <MultiDirectionSlide />
-          </Link>
+        {/* <Link
+          href="/"
+          className="flex lg:ml-0 gap-x-2 w-full items-center justify-center"
+        >
+          {/* <p className="font-bold text-xl">Vicuna Kouture</p>
+             
+        </Link> 
+        */}
 
-          {/* <MainNav data={categories} /> */}
-          <div className="w-full flex items-center justify-center">
-            <NavbarActions userName={session?.user?.name} />
-          </div>
+        <div className="w-full flex items-center">
+          {/* <Image src="/vk.png" height={100} width={100} alt={""}></Image> */}
+          <video preload="none" width="180" height="240" className="" autoPlay loop muted>
+            <source src="vklogo.webm" type="video/webm" />
+
+            Your browser does not support the video tag.
+          </video>
         </div>
-      </Container>
+
+        {/* <MainNav data={categories} /> */}
+        <div className="w-full flex items-center justify-center">
+          <NavbarActions userName={session?.user?.name} />
+        </div>
+      </div>
+      {/* </Container> */}
     </div>
   );
 };

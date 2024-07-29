@@ -1,6 +1,6 @@
 "use client";
 
-import { ShoppingBag } from "lucide-react";
+import { Heart, LogIn, ShoppingBag, ShoppingCart, UserRound } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -46,22 +46,23 @@ const NavbarActions = ({
         </div>
       )}
       <Link href={"/auth/login"} className=" text-sm font-medium text-white ">
-        <Button className="flex items-center rounded-full bg-black px-4 py-2 border-2 border-transparent hover:border-2 hover:border-black hover:scale-110 ease-in-out transition-all duration-400 hover:bg-pink-300 hover:text-black">
-          Login
+        <Button className="flex items-center rounded-full bg-[#00000000] px-4 py-2 border-2 border-transparent hover:border-2 hover:border-black hover:scale-110 ease-in-out transition-all duration-400 hover:bg-pink-300 text-white font-extrabold hover:text-black">
+          <UserRound className="scale-125" />
         </Button>
       </Link>
       <Link href={"/auth/signup"} className=" text-sm font-medium text-white">
-        <Button className="flex items-center rounded-full bg-black px-4 py-2 border-2 border-transparenthover:border-2 hover:border-black hover:scale-110 ease-in-out transition-all duration-400 hover:bg-pink-300 hover:text-black">
-          Sign Up
+        <Button className="flex items-center rounded-full bg-[#00000000] px-4 py-2 border-2 border-transparenthover:border-2 hover:border-black hover:scale-110 ease-in-out transition-all duration-400 hover:bg-pink-300 text-white hover:text-black">
+          <Heart className="scale-125" />
         </Button>
       </Link>
 
       <Button
         onClick={() => router.push("/cart")}
-        className="flex items-center rounded-full bg-black px-4 py-2 border-2 border-transparent hover:border-2 hover:border-black hover:scale-110 ease-in-out transition-all duration-400 hover:bg-pink-300 hover:text-black"
+        className="flex items-center rounded-full bg-[#00000000] px-4 py-2 border-2 border-transparent hover:border-2 hover:border-black hover:scale-110 ease-in-out transition-all duration-400 hover:bg-pink-300 text-white hover:text-black"
       >
-        <ShoppingBag size={20} className="" />
-        <span className="ml-2 text-sm font-bold ">{cart.items.length}</span>
+        {/* <ShoppingBag size={20} className="" /> */}
+        <ShoppingCart className="scale-125" />
+        <span className="ml-2 text-lg font-bold ">{cart.items.length}</span>
       </Button>
     </div>
   );
