@@ -32,8 +32,8 @@ const CheckoutPage = () => {
                 <input type="hidden" name="prefill[contact]" value="9123456780" />
                 <input type="hidden" name="prefill[email]" value="gaurav.kumar@example.com" />
                 <input type="hidden" name="notes[shipping address]" value="L-16, The Business Centre, 61 Wellfield Road, New Delhi - 110001" />
-                <input type="hidden" name="callback_url" value="http://localhost:5000/api/payments/payment-callback" />
-                <input type="hidden" name="cancel_url" value="http://localhost:5000/api/payments/payment-cancel" />
+                <input type="hidden" name="callback_url" value="https://orthodox-lucille-student4100-e471438e.koyeb.app/api/payments/payment-callback" />
+                <input type="hidden" name="cancel_url" value="https://orthodox-lucille-student4100-e471438e.koyeb.app/api/payments/payment-cancel" />
                 <div className="mt-4 flex justify-center">
                     <button
                         type='submit'
