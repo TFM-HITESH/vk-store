@@ -30,7 +30,7 @@ const CheckoutForm = () => {
         console.log(items);
         const onCheckout = async () => {
             const response = await axios.post(
-                `http://127.0.0.1:5000/api/payments/orders`,
+                `https://orthodox-lucille-student4100-e471438e.koyeb.app/api/payments/orders`,
                 {
                     productIds: items.map((item) => item.id),
                 },
@@ -45,7 +45,7 @@ const CheckoutForm = () => {
     const submitHandler = async(event:any) =>{
         event?.preventDefault();
         try{
-            await axios.post('http://127.0.0.1:5000/api/v1/user/saveUserOrder',
+            await axios.post('https://orthodox-lucille-student4100-e471438e.koyeb.app/api/v1/user/saveUserOrder',
                 {
                     orderId: orderId,
                     amount: parseInt(amount),
